@@ -1,7 +1,6 @@
 (() => {
   "use strict";
 
-  // SCROLL REVEAL (AOS-like)
   const elements = document.querySelectorAll(".fade");
 
   if (!elements.length) return;
@@ -11,7 +10,7 @@
       for (const entry of entries) {
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
-          obs.unobserve(entry.target); // run once
+          obs.unobserve(entry.target);
         }
       }
     },
